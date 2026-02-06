@@ -1,0 +1,66 @@
+:root {
+    --bg: #030712;
+    --primary: #3b82f6; 
+    --accent: #06b6d4;
+    --text: #f3f4f6;
+    --glass: rgba(255, 255, 255, 0.03);
+    --border: rgba(255, 255, 255, 0.1);
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Space Grotesk', sans-serif; }
+body { background: var(--bg); color: var(--text); overflow-x: hidden; scroll-behavior: smooth; }
+
+.bg-gradient {
+    position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+    background: radial-gradient(circle at 50% 50%, #111827 0%, #030712 100%);
+    z-index: -1;
+}
+
+.container { max-width: 1200px; margin: 0 auto; padding: 0 30px; }
+.flex { display: flex; justify-content: space-between; align-items: center; }
+
+/* Navbar - Updated Logo Style */
+.navbar { padding: 25px 0; position: fixed; width: 100%; top: 0; z-index: 1000; border-bottom: 1px solid var(--border); background: rgba(3, 7, 18, 0.85); backdrop-filter: blur(12px); }
+.logo { font-size: 18px; font-weight: 700; color: var(--text); letter-spacing: 2px; text-transform: uppercase; }
+
+.nav-links { display: flex; gap: 40px; list-style: none; }
+.nav-links a { text-decoration: none; color: #9ca3af; font-size: 13px; transition: 0.3s; }
+.nav-links a:hover { color: var(--primary); }
+.btn-neon { border: 1px solid var(--primary); padding: 8px 20px; border-radius: 4px; color: var(--primary) !important; text-decoration: none; font-size: 13px; }
+
+/* Hero */
+.hero { padding: 180px 0 100px; }
+.status-bar { display: inline-flex; align-items: center; gap: 10px; background: var(--glass); border: 1px solid var(--border); padding: 6px 15px; border-radius: 50px; font-size: 13px; margin-bottom: 30px; }
+.dot { height: 8px; width: 8px; background: #10b981; border-radius: 50%; box-shadow: 0 0 10px #10b981; }
+.hero h1 { font-size: 4.5rem; line-height: 1.1; margin-bottom: 30px; font-weight: 700; }
+.text-gradient { background: linear-gradient(90deg, var(--primary), var(--accent)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+.hero p { font-size: 1.2rem; color: #9ca3af; max-width: 650px; margin-bottom: 40px; }
+.btn-primary { background: var(--primary); color: white; padding: 16px 40px; border-radius: 4px; text-decoration: none; font-weight: 700; transition: 0.3s; display: inline-block; }
+.btn-git { margin-left: 20px; color: #9ca3af; text-decoration: none; border-bottom: 1px solid #9ca3af; padding-bottom: 5px; }
+
+/* General Sections */
+.section { padding: 100px 0; }
+.glass-card { background: var(--glass); border: 1px solid var(--border); border-radius: 24px; padding: 50px; backdrop-filter: blur(10px); }
+.about-flex { display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 50px; align-items: center; }
+.edu-tag { margin-top: 30px; padding: 20px; background: rgba(255,255,255,0.02); border-left: 4px solid var(--primary); }
+
+.section-title { font-size: 2.5rem; margin-bottom: 50px; text-align: center; font-weight: 700; }
+.skills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 25px; }
+.skill-box { background: var(--glass); border: 1px solid var(--border); padding: 40px; border-radius: 16px; transition: 0.3s; }
+.skill-box:hover { border-color: var(--primary); transform: translateY(-5px); }
+.skill-box h3 { color: var(--primary); margin-bottom: 10px; font-size: 1.2rem; }
+
+.project-item { display: flex; align-items: center; gap: 40px; padding: 40px; border-bottom: 1px solid var(--border); transition: 0.3s; }
+.project-item:hover { background: var(--glass); padding-left: 50px; }
+.p-num { font-size: 2.5rem; font-weight: 700; opacity: 0.2; color: var(--primary); }
+
+.footer-glass { text-align: center; padding: 80px 40px; background: var(--glass); border: 1px solid var(--border); border-radius: 30px; margin-bottom: 50px; }
+.contact-grid { display: flex; justify-content: space-around; margin: 40px 0; flex-wrap: wrap; gap: 30px; }
+.c-links a { color: var(--primary); margin: 0 15px; text-decoration: none; font-weight: 700; }
+.copy { font-size: 12px; opacity: 0.4; margin-top: 40px; }
+
+@media (max-width: 768px) {
+    .hero h1 { font-size: 2.8rem; }
+    .about-flex { grid-template-columns: 1fr; }
+    .nav-links { display: none; }
+}
